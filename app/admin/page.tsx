@@ -1,9 +1,10 @@
 import React from 'react'
+import ImageUploader from './components/imageuploader'
 
 const page = () => {
   return (
     <div>
-      this is admin 
+     <ImageUploader />
     </div>
   )
 }

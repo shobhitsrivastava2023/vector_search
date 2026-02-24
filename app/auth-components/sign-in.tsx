@@ -93,7 +93,7 @@ export default function SignIn() {
 						{loading ? (
 							<Loader2 size={16} className="animate-spin" />
 						) : (
-							<p>Login</p>
+							<p className="cursor-pointer">Login</p>
 						)}
 					</Button>
 					<Button
