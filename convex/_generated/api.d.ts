@@ -8,6 +8,7 @@
  * @module
  */
 
+import type * as imagehelpers from "../imagehelpers.js";
 import type * as images from "../images.js";
 
 import type {
@@ -17,6 +18,7 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  imagehelpers: typeof imagehelpers;
   images: typeof images;
 }>;
 

@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
     model: "gemini-2.5-flash",
     contents: [
       { inlineData: { data: base64, mimeType } },
-      { text: "Describe this image in detail, focusing on visual features, colors, shapes, objects, and style." },
+      { text: "Describe this image in detail, focusing on visual features, colors, shapes, objects, and style. keep it short" },
     ],
   });
   const description = result.text ?? "";
@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
     contents: description,
   });
   const embedding = embeddingResult.embeddings![0].values ?? [];
-x
+
   await convex.mutation(api.images.storeImage, {
     storageId,
     description,

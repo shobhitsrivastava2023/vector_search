@@ -12,7 +12,7 @@ images: defineTable({
   embedding: v.optional(v.array(v.float64())), 
 }).vectorIndex("by_embedding", {
   vectorField: "embedding",
-  dimensions: 768,
+  dimensions: 3072,
 })
 })
 
